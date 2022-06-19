@@ -43,7 +43,7 @@ void NPC::Update(float dt)
 	//m_RigidBody->Update(dt);//velocidad con la que cae el pichingo //poner 0 para clss
 
 	m_RigidBody->Update(0.7);//velocidad con la que cae el pichingo //poner 0 para clss
-	m_RigidBody->SetGravity(0);
+	m_RigidBody->SetGravity(1);
 
 	m_Transform->TranslateX(m_RigidBody->Position().X);
 	m_Transform->TranslateY(m_RigidBody->Position().Y);

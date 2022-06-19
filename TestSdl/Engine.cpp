@@ -78,19 +78,19 @@ bool Engine::Init()
 	//load texture	
 	//animaciones Movimiento 
 	//Hoal
-	TextureManager::GetInstance()->Load("reyes_estatico", "C:\\Users\\jcoq2\\source\\repos\\BirchEngine - Textures\\TestSdl\\reyes_estatico.png");
-	TextureManager::GetInstance()->Load("reyes_corriendo", "C:\\Users\\jcoq2\\source\\repos\\BirchEngine - Textures\\TestSdl\\tinoco.png");
-	TextureManager::GetInstance()->Load("reyes_parriba", "C:\\Users\\jcoq2\\source\\repos\\BirchEngine - Textures\\TestSdl\\reyes_parriba.png");
-	TextureManager::GetInstance()->Load("reyes_pabajo", "C:\\Users\\jcoq2\\source\\repos\\BirchEngine - Textures\\TestSdl\\reyes_pabajo.png");
+	TextureManager::GetInstance()->Load("reyes_estatico", "reyes_estatico.png");
+	TextureManager::GetInstance()->Load("reyes_corriendo", "tinoco.png");
+	TextureManager::GetInstance()->Load("reyes_parriba", "reyes_parriba.png");
+	TextureManager::GetInstance()->Load("reyes_pabajo", "reyes_pabajo.png");
 
 	//npcs
-	TextureManager::GetInstance()->Load("tod", "C:\\Users\\jcoq2\\source\\repos\\BirchEngine - Textures\\TestSdl\\princess.png");
+	TextureManager::GetInstance()->Load("tod", "princess.png");
 	
 	//atques
-	TextureManager::GetInstance()->Load("ataqueEnfrente", "C:\\Users\\jcoq2\\source\\repos\\BirchEngine - Textures\\TestSdl\\ataqueEnfrente.png");
+	TextureManager::GetInstance()->Load("ataqueEnfrente", "ataqueEnfrente.png");
 	
 	//fomnods
-	TextureManager::GetInstance()->Load("abc", "C:\\Users\\jcoq2\\source\\repos\\BirchEngine - Textures\\TestSdl\\abc.png");
+	TextureManager::GetInstance()->Load("fondo14", "fondo14.png");
 	//TextureManager::GetInstance()->Load("version2.0", "C:\\Dev\\BirchEngine - Textures\\TestSdl\\version2.0.tmx");
 	
 	//TextureManager::GetInstance()->Load("mapeado", "C:\\Dev\\BirchEngine - Textures\\TestSdl\\mapeado.png");
@@ -99,8 +99,8 @@ bool Engine::Init()
 	//reyes=new Warrior(new Properties("reyes_estatico",100,200,32,64)); //movimiento normal con animacion para empezar
 	
 	//reyes=new Warrior(new Properties("reyes_estatico",60,478,32,64)); //movimiento normal con animacion para empezar
-	reyes=new Warrior(new Properties("reyes_estatico",190, 10,32,29)); //movimiento normal con animacion para empezar
-	tod=new NPC(new Properties("tod", 620,300,32,29));
+	reyes=new Warrior(new Properties("reyes_estatico",50, 500,32,29)); //movimiento normal con animacion para empezar
+	tod=new NPC(new Properties("tod", 255,50,32,29));
 
 	
 	/*Transform tf;
@@ -130,8 +130,8 @@ void Engine::Render()
 	//TextureManager::GetInstance()->Draw("fondo14", 0, 0, 960, 640);////mlkm
 	
 	//m_LevelMap->Render();
-	//TextureManager::GetInstance()->Draw("abc", 0, 0, 1920, 1080);////mlkm
-	TextureManager::GetInstance()->Draw("abc", 0, 0, 960, 640);////mlkm
+	TextureManager::GetInstance()->Draw("fondo14", 0, 0, 1920, 1080);////mlkm
+	//TextureManager::GetInstance()->Draw("abc", 0, 0, 960, 640);////mlkm
 	reyes->Draw();
 	
 	tod->Draw();
